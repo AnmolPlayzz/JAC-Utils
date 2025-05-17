@@ -2,6 +2,7 @@ require("dotenv").config();
 const fs = require('node:fs');
 const path = require('node:path');
 const { Client, Collection, GatewayIntentBits } = require('discord.js');
+const keepAlive = require("./healthCheck");
 
 const token = process.env.TOKEN;
 
@@ -45,5 +46,4 @@ for (const file of eventFiles) {
 }
 
 client.login(token);
-
-module.exports = client;
+keepAlive()
