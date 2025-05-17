@@ -39,9 +39,7 @@ module.exports = {
                     if(bannedUserIds.some(e => e = repId)) {
                         message.delete()
                     }
-                }
-                
-                message.channel.send("https://media.discordapp.net/attachments/546763235051700314/883051087492423730/image0.gif?ex=682a2269&is=6828d0e9&hm=d7fd051e8cda3c4538ef348aab078fa55639a91b328c36c3f9516b7c65edf056&=&width=178&height=190")
+                }  
             }
         } catch(e) {
         }
