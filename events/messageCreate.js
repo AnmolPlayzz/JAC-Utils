@@ -36,7 +36,7 @@ module.exports = {
                 if(message.reference) {
                     const replyMsg = await message.channel.messages.fetch(message.reference.messageId);
                     const repId = replyMsg.author.id
-                    if(bannedUserIds.some(elm => elm = repId)) {
+                    if(bannedUserIds.some(elm => elm === repId)) {
                         message.delete()
                     }
                 }  
